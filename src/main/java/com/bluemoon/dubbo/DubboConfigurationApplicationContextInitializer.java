@@ -11,7 +11,6 @@ public class DubboConfigurationApplicationContextInitializer implements Applicat
 
     @Override
     public void initialize(ConfigurableApplicationContext applicationContext) {
-        System.out.println("DubboConfigurationApplicationContextInitializer start!!!!");
         Environment env = applicationContext.getEnvironment();
         String scan = env.getProperty("spring.dubbo.scan");
         if (scan != null) {
@@ -22,7 +21,6 @@ public class DubboConfigurationApplicationContextInitializer implements Applicat
             applicationContext.getBeanFactory().addBeanPostProcessor(scanner);
             applicationContext.getBeanFactory().registerSingleton("annotationBean", scanner);
         }
-        System.out.println("DubboConfigurationApplicationContextInitializer end!!!!");
     }
 
 
