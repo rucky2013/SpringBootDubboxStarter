@@ -11,3 +11,26 @@
 ```
 
 ### 配置
+
+生产者:
+```yaml
+spring.dubbo:
+  application:
+    name: provider-test #应用名
+  registry:
+    address: zookeeper://127.0.0.1:2181 #zk地址
+  protocol:
+    name: dubbo #协议名
+    port: 20880 #协议端口
+  scan: com.bluemoon.kafka.dubbo #扫描包名
+```
+
+消费者
+```yaml
+spring.dubbo:
+  application:
+    name: consumer-test
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  scan: com.bluemoon.kafka.dubbo
+```
