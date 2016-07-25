@@ -1,6 +1,4 @@
 org.springframework.context.ApplicationContextInitializer=\
 com.bluemoon.dubbo.DubboConfigurationApplicationContextInitializer
-org.springframework.context.ApplicationListener=\
-com.bluemoon.dubbo.DubboHolderListener
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
 com.bluemoon.dubbo.DubboAutoConfiguration
